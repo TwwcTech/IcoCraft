@@ -34,6 +34,7 @@
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.FromArgb(179, 205, 224);
             ClientSize = new Size(950, 528);
             FormBorderStyle = FormBorderStyle.Fixed3D;
             HelpButton = true;

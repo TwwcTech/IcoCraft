@@ -1,4 +1,6 @@
-﻿namespace IcoCraft.backend.EventHandlers.Subscribers
+﻿using IcoCraft.backend.Singletons;
+
+namespace IcoCraft.backend.EventHandlers.Subscribers
 {
     internal class CraftOperator
     {
@@ -6,17 +8,25 @@
         {
             if (pngPath == string.Empty)
             {
-                // MessageBox
+                MessageBox.Show("Must not be empty");
                 return;
             }
 
             if (craftedIconName == string.Empty)
             {
-                // MessageBox
+                MessageBox.Show("Must not be empty");
                 return;
             }
 
-            // Code goes here
+            try
+            {
+                IconConverterTool.Instance.ConvertToIcon(pngPath, craftedIconName);
+            }
+            catch (Exception ex)
+            {
+                // Testing
+                throw new Exception(ex.ToString());
+            }
         }
     }
 }

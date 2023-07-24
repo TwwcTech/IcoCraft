@@ -34,5 +34,12 @@ namespace IcoCraft
         {
 
         }
+
+        /*
+         * TODO:
+         *     + Complete the GUI for Crafted Files Window
+         *     + Complete the strings for the Statics class
+         *     + Create the ReadFromFolder Controller and Operator classes (this will display the png files to the dataTreeView)
+         */
     }
 }

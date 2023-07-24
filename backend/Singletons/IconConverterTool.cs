@@ -27,5 +27,21 @@ namespace IcoCraft.backend.Singletons
                 }
             }
         }
+
+        public void IsImageFile(string path) // Change return type to 'bool'
+        {
+            lock (instanceLock)
+            {
+                // Code goes here
+            }
+        }
+
+        public void ConvertToIcon(string path)
+        {
+            lock (instanceLock)
+            {
+                // Code goes here
+            }
+        }
     }
 }

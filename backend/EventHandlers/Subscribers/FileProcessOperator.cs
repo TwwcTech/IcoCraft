@@ -17,14 +17,14 @@ namespace IcoCraft.backend.EventHandlers.Subscribers
             string[] files = (string[])e.Data.GetData(DataFormats.FileDrop);
             foreach(string file in files)
             {
-                if (IconConverterTool.Instance.IsCorrectFileSize(file))
+                if (IconConverterTool.Instance.IsPngFile(file) && IconConverterTool.Instance.IsCorrectFileSize(file))
                 {
                     pngFileTextBox.Text = file;
                 }
                 else
                 {
                     pngFileTextBox.Text = string.Empty;
-                    MessageBox.Show("Not the correct file size", "File Size Entry Error");
+                    MessageBox.Show("File type must be PNG and file size must be between 32x32 and 64x64", "File Size Entry Error");
                 }
             }
         }

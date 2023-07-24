@@ -16,5 +16,10 @@ namespace IcoCraft.frontend.Windows
         {
             InitializeComponent();
         }
+
+        private void CraftedFilesWindow_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -28,15 +28,19 @@ namespace IcoCraft.backend.Singletons
             }
         }
 
-        public void IsImageFile(string path) // Change return type to 'bool'
+        public bool IsPngFile(string path)
         {
             lock (instanceLock)
             {
-                // Code goes here
+                if (!path.Contains(".png") || !path.Contains(".PNG"))
+                {
+                    return false;
+                }
+                return true;
             }
         }
 
-        public void GetFileSize(string path) // Change return type to 'bool'
+        public void IsCorrectFileSize(string path) // Change return type to 'bool'
         {
             lock (instanceLock)
             {

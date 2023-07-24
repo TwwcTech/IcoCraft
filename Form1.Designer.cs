@@ -28,7 +28,64 @@
         /// </summary>
         private void InitializeComponent()
         {
+            ControlPanel = new Panel();
+            ViewCraftedButton = new Button();
+            CraftButton = new Button();
+            PngPathEntryBox = new TextBox();
+            IconNameEntryBox = new TextBox();
+            ControlPanel.SuspendLayout();
             SuspendLayout();
+            // 
+            // ControlPanel
+            // 
+            ControlPanel.BackColor = Color.FromArgb(100, 151, 177);
+            ControlPanel.Controls.Add(ViewCraftedButton);
+            ControlPanel.Controls.Add(CraftButton);
+            ControlPanel.Dock = DockStyle.Bottom;
+            ControlPanel.Location = new Point(0, 397);
+            ControlPanel.Name = "ControlPanel";
+            ControlPanel.Size = new Size(950, 131);
+            ControlPanel.TabIndex = 0;
+            // 
+            // ViewCraftedButton
+            // 
+            ViewCraftedButton.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            ViewCraftedButton.Location = new Point(470, 36);
+            ViewCraftedButton.Name = "ViewCraftedButton";
+            ViewCraftedButton.Size = new Size(261, 59);
+            ViewCraftedButton.TabIndex = 1;
+            ViewCraftedButton.Text = "VIEW CRAFTED";
+            ViewCraftedButton.UseVisualStyleBackColor = true;
+            ViewCraftedButton.Click += ViewCraftedButton_Click;
+            // 
+            // CraftButton
+            // 
+            CraftButton.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            CraftButton.Location = new Point(191, 36);
+            CraftButton.Name = "CraftButton";
+            CraftButton.Size = new Size(261, 59);
+            CraftButton.TabIndex = 0;
+            CraftButton.Text = "CRAFT";
+            CraftButton.UseVisualStyleBackColor = true;
+            CraftButton.Click += CraftButton_Click;
+            // 
+            // PngPathEntryBox
+            // 
+            PngPathEntryBox.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            PngPathEntryBox.Location = new Point(191, 125);
+            PngPathEntryBox.Name = "PngPathEntryBox";
+            PngPathEntryBox.PlaceholderText = "Drag and Drop your PNG file here";
+            PngPathEntryBox.Size = new Size(540, 37);
+            PngPathEntryBox.TabIndex = 1;
+            // 
+            // IconNameEntryBox
+            // 
+            IconNameEntryBox.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            IconNameEntryBox.Location = new Point(191, 225);
+            IconNameEntryBox.Name = "IconNameEntryBox";
+            IconNameEntryBox.PlaceholderText = "Enter name for crafted Icon file";
+            IconNameEntryBox.Size = new Size(540, 37);
+            IconNameEntryBox.TabIndex = 2;
             // 
             // MainFrame
             // 
@@ -36,15 +93,27 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(179, 205, 224);
             ClientSize = new Size(950, 528);
+            Controls.Add(IconNameEntryBox);
+            Controls.Add(PngPathEntryBox);
+            Controls.Add(ControlPanel);
             FormBorderStyle = FormBorderStyle.Fixed3D;
             HelpButton = true;
             MaximizeBox = false;
             Name = "MainFrame";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "IcoCraft";
+            Load += MainFrame_Load;
+            ControlPanel.ResumeLayout(false);
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
+
+        private Panel ControlPanel;
+        private TextBox PngPathEntryBox;
+        private TextBox IconNameEntryBox;
+        private Button CraftButton;
+        private Button ViewCraftedButton;
     }
 }

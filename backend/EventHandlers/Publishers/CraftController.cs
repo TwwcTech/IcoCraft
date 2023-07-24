@@ -2,7 +2,7 @@
 {
     internal class CraftController
     {
-        // Add events
+        public event CraftHandler? Crafter;
 
         public string GetPngPath(string pngPath)
         {
@@ -24,7 +24,7 @@
 
         public void Craft(string pngPath, string fileName)
         {
-            // Invoke delegate here
+            Crafter?.Invoke(pngPath, fileName);
         }
     }
 }

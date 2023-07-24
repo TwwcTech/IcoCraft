@@ -23,7 +23,7 @@ namespace IcoCraft.backend.EventHandlers.Subscribers
             foreach (string file in files)
             {
                 /*
-                if (IconConverterTool.Instance.GetFileSize(file)) 
+                if (IconConverterTool.Instance.IsCorrectFileSize(file)) 
                 {
                     pngFileTextBox.Text = file;
                 }

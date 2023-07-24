@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace IcoCraft.backend.Singletons
 {
-    internal class IconConverterTool
+    public sealed class IconConverterTool
     {
-        private readonly IconConverterTool? _instance;
-        object instanceLock = new();
+        private static IconConverterTool? _instance;
+        private static readonly object instanceLock = new();
 
         private IconConverterTool () { }
 

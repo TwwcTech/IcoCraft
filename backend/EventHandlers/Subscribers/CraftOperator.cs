@@ -2,8 +2,20 @@
 {
     internal class CraftOperator
     {
-        public void OnCraft()
+        public void OnCraft(string pngPath, string craftedIconName)
         {
+            if (pngPath == string.Empty)
+            {
+                // MessageBox
+                return;
+            }
+
+            if (craftedIconName == string.Empty)
+            {
+                // MessageBox
+                return;
+            }
+
             // Code goes here
         }
     }

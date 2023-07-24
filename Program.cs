@@ -1,5 +1,8 @@
 namespace IcoCraft
 {
+    // Delegates go here
+    public delegate void CraftHandler(string pngPath, string craftedIconName);
+
     internal static class Program
     {
         /// <summary>

@@ -1,18 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace IcoCraft.backend.Singletons
+﻿namespace IcoCraft.backend.Singletons
 {
     public sealed class IconConverterTool
     {
         private static IconConverterTool? _instance;
         private static readonly object instanceLock = new();
 
-        private IconConverterTool () { }
+        private IconConverterTool() { }
 
         public static IconConverterTool Instance
         {

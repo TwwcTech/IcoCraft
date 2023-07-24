@@ -12,19 +12,38 @@ namespace IcoCraft.backend.EventHandlers.Subscribers
             }
         }
 
-        public void OnDragDrop(object sender, DragEventArgs e, TextBox pngFileTextBox) // Add TextBox Param
+        public void OnDragDrop(object sender, DragEventArgs e, TextBox pngFileTextBox)
         {
-            string[] files = (string[])e.Data.GetData(DataFormats.FileDrop);
-            foreach(string file in files)
+            string[] files;
+
+            try
             {
-                if (IconConverterTool.Instance.IsPngFile(file) && IconConverterTool.Instance.IsCorrectFileSize(file))
+                files = (string[])e.Data.GetData(DataFormats.FileDrop);
+            }
+            catch (Exception ex)
+            {
+                // Testing
+                throw new Exception(ex.ToString());
+            }
+
+            foreach (string file in files)
+            {
+                try
                 {
-                    pngFileTextBox.Text = file;
+                    if (IconConverterTool.Instance.IsPngFile(file) && IconConverterTool.Instance.IsCorrectFileSize(file))
+                    {
+                        pngFileTextBox.Text = file;
+                    }
+                    else
+                    {
+                        pngFileTextBox.Text = string.Empty;
+                        MessageBox.Show("File type must be PNG and file size must be between 32x32 and 64x64", "File Size Entry Error");
+                    }
                 }
-                else
+                catch (Exception ex)
                 {
-                    pngFileTextBox.Text = string.Empty;
-                    MessageBox.Show("File type must be PNG and file size must be between 32x32 and 64x64", "File Size Entry Error");
+                    // Testing
+                    throw new Exception(ex.ToString());
                 }
             }
         }

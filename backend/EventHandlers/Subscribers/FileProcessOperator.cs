@@ -22,7 +22,6 @@ namespace IcoCraft.backend.EventHandlers.Subscribers
             string[] files = (string[])e.Data.GetData(DataFormats.FileDrop);
             foreach (string file in files)
             {
-                /*
                 if (IconConverterTool.Instance.IsCorrectFileSize(file)) 
                 {
                     pngFileTextBox.Text = file;
@@ -32,7 +31,6 @@ namespace IcoCraft.backend.EventHandlers.Subscribers
                     pngFileTextBox.Text = string.Empty;
                     MessageBox.Show("PNG file size not correct", "File Size Error");
                 }
-                */
             }
         }
     }

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -28,11 +29,11 @@ namespace IcoCraft.backend.Singletons
             }
         }
 
-        public bool IsPngFile(string path)
+        public bool IsPngFile(string pngPath)
         {
             lock (instanceLock)
             {
-                if (!path.Contains(".png") || !path.Contains(".PNG"))
+                if (!pngPath.Contains(".png") || !pngPath.Contains(".PNG"))
                 {
                     return false;
                 }
@@ -40,19 +41,55 @@ namespace IcoCraft.backend.Singletons
             }
         }
 
-        public void IsCorrectFileSize(string path) // Change return type to 'bool'
+        public bool IsCorrectFileSize(string pngPath)
         {
             lock (instanceLock)
             {
-                // Code goes here
+                Bitmap bitmap;
+
+                try
+                {
+                    bitmap = (Bitmap)Image.FromFile(pngPath);
+                }
+                catch (Exception ex)
+                {
+                    throw new Exception(ex.ToString());
+                }
+
+                if (bitmap.Width > 64 || bitmap.Width < 32)
+                {
+                    return false;
+                }
+                return true;
             }
         }
 
-        public void ConvertToIcon(string path)
+        public void ConvertToIcon(string pngPath, string saveDestination)
         {
             lock (instanceLock)
             {
-                // Code goes here
+                Bitmap bitmap;
+
+                using (FileStream stream = File.OpenWrite(saveDestination))
+                {
+                    try
+                    {
+                        bitmap = (Bitmap)Image.FromFile(pngPath);
+                    }
+                    catch (Exception ex)
+                    {
+                        throw new Exception(ex.ToString());
+                    }
+
+                    try
+                    {
+                        Icon.FromHandle(bitmap.GetHicon()).Save(stream);
+                    }
+                    catch (IOException ex)
+                    {
+                        throw new Exception(ex.ToString());
+                    }
+                }
             }
         }
     }

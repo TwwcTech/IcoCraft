@@ -13,7 +13,7 @@ namespace IcoCraft.backend.Singletons
 
         private IconConverterTool () { }
 
-        public IconConverterTool Instance
+        public static IconConverterTool Instance
         {
             get
             {
@@ -29,6 +29,14 @@ namespace IcoCraft.backend.Singletons
         }
 
         public void IsImageFile(string path) // Change return type to 'bool'
+        {
+            lock (instanceLock)
+            {
+                // Code goes here
+            }
+        }
+
+        public void GetFileSize(string path) // Change return type to 'bool'
         {
             lock (instanceLock)
             {

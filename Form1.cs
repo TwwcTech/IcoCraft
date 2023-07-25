@@ -59,7 +59,7 @@ namespace IcoCraft
         {
             try
             {
-                string savePath = DestDirManager.Instance.GetCorrectPath();        
+                string savePath = DestDirManager.Instance.GetCorrectPath();
                 if (!Directory.Exists(savePath + "CraftedIcons"))
                 {
                     DestDirManager.Instance.CreateIconsFolder(savePath);

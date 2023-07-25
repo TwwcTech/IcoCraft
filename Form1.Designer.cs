@@ -52,7 +52,7 @@
             ViewCraftedButton.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point);
             ViewCraftedButton.Location = new Point(470, 36);
             ViewCraftedButton.Name = "ViewCraftedButton";
-            ViewCraftedButton.Size = new Size(261, 59);
+            ViewCraftedButton.Size = new Size(317, 59);
             ViewCraftedButton.TabIndex = 1;
             ViewCraftedButton.Text = "VIEW CRAFTED";
             ViewCraftedButton.UseVisualStyleBackColor = true;
@@ -61,9 +61,9 @@
             // CraftButton
             // 
             CraftButton.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            CraftButton.Location = new Point(191, 36);
+            CraftButton.Location = new Point(137, 36);
             CraftButton.Name = "CraftButton";
-            CraftButton.Size = new Size(261, 59);
+            CraftButton.Size = new Size(315, 59);
             CraftButton.TabIndex = 0;
             CraftButton.Text = "CRAFT";
             CraftButton.UseVisualStyleBackColor = true;
@@ -72,19 +72,19 @@
             // PngPathEntryBox
             // 
             PngPathEntryBox.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            PngPathEntryBox.Location = new Point(191, 125);
+            PngPathEntryBox.Location = new Point(137, 120);
             PngPathEntryBox.Name = "PngPathEntryBox";
             PngPathEntryBox.PlaceholderText = "Drag and Drop your PNG file here";
-            PngPathEntryBox.Size = new Size(540, 37);
+            PngPathEntryBox.Size = new Size(650, 37);
             PngPathEntryBox.TabIndex = 1;
             // 
             // IconNameEntryBox
             // 
             IconNameEntryBox.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            IconNameEntryBox.Location = new Point(191, 225);
+            IconNameEntryBox.Location = new Point(137, 220);
             IconNameEntryBox.Name = "IconNameEntryBox";
             IconNameEntryBox.PlaceholderText = "Enter name for crafted Icon file";
-            IconNameEntryBox.Size = new Size(540, 37);
+            IconNameEntryBox.Size = new Size(650, 37);
             IconNameEntryBox.TabIndex = 2;
             // 
             // MainFrame

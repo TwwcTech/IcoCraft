@@ -8,13 +8,13 @@ namespace IcoCraft.backend.EventHandlers.Subscribers
         {
             if (pngPath == string.Empty)
             {
-                MessageBox.Show("Must not be empty");
+                MessageBox.Show("Entry must not be empty", "PNG Path Entry Error");
                 return;
             }
 
             if (craftedIconName == string.Empty)
             {
-                MessageBox.Show("Must not be empty");
+                MessageBox.Show("Entry must not be empty", "File Name Entry Error");
                 return;
             }
 

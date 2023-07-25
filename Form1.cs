@@ -57,7 +57,11 @@ namespace IcoCraft
 
         private void MainFrame_Load(object sender, EventArgs e)
         {
-
+            string savePath = DestDirManager.Instance.GetCorrectDir();
+            if (!Directory.Exists(savePath + "CraftedIcons"))
+            {
+                DestDirManager.Instance.CreateIconsFolder(savePath);
+            }
         }
 
         private void CraftButton_Click(object sender, EventArgs e)
@@ -69,7 +73,7 @@ namespace IcoCraft
             string pngPath = craftController.GetPngPath(PngPathEntryBox.Text.Trim());
             string craftedIconName = craftController.GetCraftedFileName(IconNameEntryBox.Text.Trim());
 
-            craftController.Craft(pngPath, $"{Statics.CraftedIconDest}{craftedIconName}.ico");
+            craftController.Craft(pngPath, $"{"" /* Add Save Path Here */}{craftedIconName}.ico");
 
             PngPathEntryBox.Text = string.Empty;
             IconNameEntryBox.Text = string.Empty;
@@ -84,7 +88,6 @@ namespace IcoCraft
          * TODO:
          *     + Complete the GUI for Crafted Files Window
          *     + Complete the strings for the Statics class
-         *     + Create the ReadFromFolder Controller and Operator classes (this will display the png files to the dataTreeView)
          */
     }
 }

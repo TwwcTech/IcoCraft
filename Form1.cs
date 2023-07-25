@@ -80,7 +80,7 @@ namespace IcoCraft
             string pngPath = craftController.GetPngPath(PngPathEntryBox.Text.Trim());
             string craftedIconName = craftController.GetCraftedFileName(IconNameEntryBox.Text.Trim());
 
-            craftController.Craft(pngPath, $"{"" /* Add Save Path Here */}{craftedIconName}.ico");
+            craftController.Craft(pngPath, $@"{DestDirManager.Instance.GetCorrectDir()}{craftedIconName}.ico");
 
             PngPathEntryBox.Text = string.Empty;
             IconNameEntryBox.Text = string.Empty;
@@ -95,5 +95,6 @@ namespace IcoCraft
          * TODO:
          *     + Complete the GUI for Crafted Files Window
          */
+
     }
 }

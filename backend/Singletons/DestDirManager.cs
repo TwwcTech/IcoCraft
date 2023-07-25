@@ -31,22 +31,37 @@ namespace IcoCraft.backend.Singletons
 
         public string GetCorrectDir()
         {
-            if (Directory.Exists(Statics.PrimaryDestDirPath))
+            lock (_instanceLock)
             {
-                return Statics.PrimaryDestDirPath;
+                if (Directory.Exists(Statics.PrimaryDestDirPath))
+                {
+                    return Statics.PrimaryDestDirPath;
+                }
+                return Statics.AltDestDirPath;
             }
-            return Statics.AltDestDirPath;
         }
 
         public void CreateIconsFolder(string correctSubPath)
         {
-            try
+            lock (_instanceLock)
             {
-                Directory.CreateDirectory(correctSubPath + "CraftedIcons");
+                try
+                {
+                    Directory.CreateDirectory(correctSubPath + "CraftedIcons");
+                }
+                catch (Exception ex)
+                {
+                    throw new Exception(ex.ToString());
+                }
             }
-            catch (Exception ex)
+        }
+
+        public IEnumerable<FileInfo> GetIcons(string craftedIconsPath)
+        {
+            lock (_instanceLock)
             {
-                throw new Exception(ex.ToString());
+                DirectoryInfo directoryInfo = new DirectoryInfo(craftedIconsPath);
+                return directoryInfo.EnumerateFiles(craftedIconsPath, SearchOption.TopDirectoryOnly);
             }
         }
     }

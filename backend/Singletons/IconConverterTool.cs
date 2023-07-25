@@ -2,7 +2,7 @@
 {
     public sealed class IconConverterTool
     {
-        private static IconConverterTool? _instance;
+        private readonly static IconConverterTool? _instance;
         private static readonly object instanceLock = new();
 
         private IconConverterTool() { }

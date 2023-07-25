@@ -1,7 +1,6 @@
 using IcoCraft.backend.EventHandlers.Publishers;
 using IcoCraft.backend.EventHandlers.Subscribers;
 using IcoCraft.backend.Singletons;
-using IcoCraft.resources;
 
 namespace IcoCraft
 {

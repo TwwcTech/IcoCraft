@@ -71,7 +71,6 @@
             // 
             // PngPathEntryBox
             // 
-            PngPathEntryBox.AllowDrop = true;
             PngPathEntryBox.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point);
             PngPathEntryBox.Location = new Point(191, 125);
             PngPathEntryBox.Name = "PngPathEntryBox";

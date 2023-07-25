@@ -1,6 +1,7 @@
 using IcoCraft.backend.EventHandlers.Publishers;
 using IcoCraft.backend.EventHandlers.Subscribers;
 using IcoCraft.backend.Singletons;
+using IcoCraft.resources;
 
 namespace IcoCraft
 {
@@ -58,7 +59,7 @@ namespace IcoCraft
         {
             try
             {
-                string savePath = DestDirManager.Instance.GetCorrectDir();
+                string savePath = DestDirManager.Instance.GetCorrectPath();        
                 if (!Directory.Exists(savePath + "CraftedIcons"))
                 {
                     DestDirManager.Instance.CreateIconsFolder(savePath);
@@ -79,7 +80,7 @@ namespace IcoCraft
             string pngPath = craftController.GetPngPath(PngPathEntryBox.Text.Trim());
             string craftedIconName = craftController.GetCraftedFileName(IconNameEntryBox.Text.Trim());
 
-            craftController.Craft(pngPath, $@"{DestDirManager.Instance.GetCorrectDir()}{craftedIconName}.ico");
+            craftController.Craft(pngPath, $@"{DestDirManager.Instance.GetCorrectPath()}{craftedIconName}.ico");
 
             PngPathEntryBox.Text = string.Empty;
             IconNameEntryBox.Text = string.Empty;

@@ -24,18 +24,6 @@ namespace IcoCraft.backend.Singletons
             }
         }
 
-        public string GetCorrectDir()
-        {
-            lock (_instanceLock)
-            {
-                if (Directory.Exists(Statics.PrimaryDestDirPath))
-                {
-                    return Statics.PrimaryDestDirPath;
-                }
-                return Statics.AltDestDirPath;
-            }
-        }
-
         public void CreateIconsFolder(string correctSubPath)
         {
             lock (_instanceLock)
@@ -48,6 +36,18 @@ namespace IcoCraft.backend.Singletons
                 {
                     throw new Exception(ex.ToString());
                 }
+            }
+        }
+
+        public string GetCorrectPath()
+        {
+            lock (_instanceLock)
+            {
+                if (!Directory.Exists(Statics.PrimaryDestDirPath))
+                {
+                    return Statics.AltDestDirPath;
+                }
+                return Statics.PrimaryDestDirPath;
             }
         }
 

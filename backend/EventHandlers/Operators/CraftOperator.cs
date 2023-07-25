@@ -24,7 +24,6 @@ namespace IcoCraft.backend.EventHandlers.Subscribers
             }
             catch (Exception ex)
             {
-                // Testing
                 throw new Exception(ex.ToString());
             }
         }

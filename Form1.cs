@@ -57,10 +57,17 @@ namespace IcoCraft
 
         private void MainFrame_Load(object sender, EventArgs e)
         {
-            string savePath = DestDirManager.Instance.GetCorrectDir();
-            if (!Directory.Exists(savePath + "CraftedIcons"))
+            try
             {
-                DestDirManager.Instance.CreateIconsFolder(savePath);
+                string savePath = DestDirManager.Instance.GetCorrectDir();
+                if (!Directory.Exists(savePath + "CraftedIcons"))
+                {
+                    DestDirManager.Instance.CreateIconsFolder(savePath);
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.ToString());
             }
         }
 
@@ -87,7 +94,6 @@ namespace IcoCraft
         /*
          * TODO:
          *     + Complete the GUI for Crafted Files Window
-         *     + Complete the strings for the Statics class
          */
     }
 }

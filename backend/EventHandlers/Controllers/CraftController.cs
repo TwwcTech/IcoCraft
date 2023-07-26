@@ -1,4 +1,6 @@
-﻿namespace IcoCraft.backend.EventHandlers.Publishers
+﻿using IcoCraft.resources;
+
+namespace IcoCraft.backend.EventHandlers.Publishers
 {
     internal class CraftController
     {
@@ -17,7 +19,7 @@
         {
             if (fileName == string.Empty)
             {
-                return string.Empty;
+                return "ThisIsATest"; // Format the date properly in Statics and add it here
             }
             return fileName;
         }

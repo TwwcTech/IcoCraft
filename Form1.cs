@@ -1,7 +1,7 @@
 using IcoCraft.backend.EventHandlers.Publishers;
 using IcoCraft.backend.EventHandlers.Subscribers;
 using IcoCraft.backend.Singletons;
-using IcoCraft.resources;
+using IcoCraft.frontend.Windows;
 
 namespace IcoCraft
 {
@@ -89,12 +89,15 @@ namespace IcoCraft
 
         private void ViewCraftedButton_Click(object sender, EventArgs e)
         {
-
+            Form viewCraftedForm = new CraftedFilesWindow();
+            viewCraftedForm.ShowDialog();
         }
 
         /*
          * TODO:
          *     + Complete the GUI for Crafted Files Window
+         *     + Test the DestDirManager method for Enumerating all ico files
+         *     + Link the ico file enumerating method to the DataGrid view in the CraftedFilesWindow
          */
 
     }

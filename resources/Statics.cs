@@ -2,7 +2,7 @@
 {
     internal class Statics
     {
-        private static DateTime _dateTimeStamp = DateTime.Now;
+        private static DateTime _dateTimeStamp = DateTime.Now.Date;
         private static string _currentUser = Environment.UserName;
         private static string? _primaryDestDirPath = $@"C:\Users\{CurrentUser}\OneDrive\Documents\";
         private static string? _altDestDirPath = $@"C:\{CurrentUser}\Documents\";

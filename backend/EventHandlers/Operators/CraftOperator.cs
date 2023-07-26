@@ -8,7 +8,7 @@ namespace IcoCraft.backend.EventHandlers.Subscribers
         {
             if (pngPath == string.Empty)
             {
-                MessageBox.Show("Entry must not be empty", "PNG Path Entry Error");
+                MessageBox.Show("Entry must not be empty!", "PNG Path Entry Error");
                 return;
             }
 

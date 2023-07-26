@@ -19,7 +19,7 @@ namespace IcoCraft.backend.EventHandlers.Publishers
         {
             if (fileName == string.Empty)
             {
-                return "ThisIsATest"; // Format the date properly in Statics and add it here
+                return Statics.DateTimeStamp.ToString("ddMMyyyy");
             }
             return fileName;
         }

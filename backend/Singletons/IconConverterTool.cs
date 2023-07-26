@@ -46,7 +46,6 @@
                 }
                 catch (Exception ex)
                 {
-                    // Testing
                     throw new Exception(ex.ToString());
                 }
 

@@ -12,12 +12,6 @@ namespace IcoCraft.backend.EventHandlers.Subscribers
                 return;
             }
 
-            if (craftedIconName == string.Empty)
-            {
-                MessageBox.Show("Entry must not be empty", "File Name Entry Error");
-                return;
-            }
-
             try
             {
                 IconConverterTool.Instance.ConvertToIcon(pngPath, craftedIconName);

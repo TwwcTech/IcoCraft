@@ -92,13 +92,5 @@ namespace IcoCraft
             Form viewCraftedForm = new CraftedFilesWindow();
             viewCraftedForm.ShowDialog();
         }
-
-        /*
-         * TODO:
-         *     + Complete the GUI for Crafted Files Window
-         *     + Test the DestDirManager method for Enumerating all ico files
-         *     + Link the ico file enumerating method to the DataGrid view in the CraftedFilesWindow
-         */
-
     }
 }

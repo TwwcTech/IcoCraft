@@ -51,12 +51,19 @@ namespace IcoCraft.backend.Singletons
             }
         }
 
-        public IEnumerable<FileInfo> GetIcons(string craftedIconsPath)
+        public FileInfo[] GetIcons(string craftedIconsPath)
         {
             lock (_instanceLock)
             {
                 DirectoryInfo directoryInfo = new DirectoryInfo(craftedIconsPath);
-                return directoryInfo.EnumerateFiles(craftedIconsPath, SearchOption.TopDirectoryOnly);
+                try
+                {
+                    return directoryInfo.GetFiles("*.ico*");
+                }
+                catch (Exception ex)
+                {
+                    throw new Exception(ex.ToString());
+                }
             }
         }
     }

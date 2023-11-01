@@ -1,4 +1,3 @@
-using IcoCraft.backend.Singletons;
 using IcoCraft.frontend.Windows;
 
 namespace IcoCraft

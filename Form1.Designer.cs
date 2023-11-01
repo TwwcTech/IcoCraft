@@ -43,20 +43,21 @@
             // 
             ControlPanel.BackColor = SystemColors.Control;
             ControlPanel.Controls.Add(ViewCraftedButton);
+            ControlPanel.Controls.Add(CraftButton);
             ControlPanel.Dock = DockStyle.Bottom;
-            ControlPanel.Location = new Point(0, 238);
+            ControlPanel.Location = new Point(0, 259);
             ControlPanel.Margin = new Padding(2);
             ControlPanel.Name = "ControlPanel";
-            ControlPanel.Size = new Size(665, 79);
+            ControlPanel.Size = new Size(518, 58);
             ControlPanel.TabIndex = 0;
             // 
             // ViewCraftedButton
             // 
             ViewCraftedButton.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            ViewCraftedButton.Location = new Point(221, 20);
+            ViewCraftedButton.Location = new Point(263, 12);
             ViewCraftedButton.Margin = new Padding(2);
             ViewCraftedButton.Name = "ViewCraftedButton";
-            ViewCraftedButton.Size = new Size(240, 35);
+            ViewCraftedButton.Size = new Size(196, 35);
             ViewCraftedButton.TabIndex = 1;
             ViewCraftedButton.Text = "VIEW CRAFTED";
             ViewCraftedButton.UseVisualStyleBackColor = true;
@@ -65,10 +66,10 @@
             // CraftButton
             // 
             CraftButton.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            CraftButton.Location = new Point(252, 136);
+            CraftButton.Location = new Point(63, 12);
             CraftButton.Margin = new Padding(2);
             CraftButton.Name = "CraftButton";
-            CraftButton.Size = new Size(133, 35);
+            CraftButton.Size = new Size(196, 35);
             CraftButton.TabIndex = 0;
             CraftButton.Text = "CRAFT";
             CraftButton.UseVisualStyleBackColor = true;
@@ -81,7 +82,7 @@
             // OpenPngButton
             // 
             OpenPngButton.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            OpenPngButton.Location = new Point(171, 69);
+            OpenPngButton.Location = new Point(111, 114);
             OpenPngButton.Name = "OpenPngButton";
             OpenPngButton.Size = new Size(75, 35);
             OpenPngButton.TabIndex = 1;
@@ -92,7 +93,7 @@
             // 
             FileToConvertLabel.AutoSize = true;
             FileToConvertLabel.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            FileToConvertLabel.Location = new Point(252, 76);
+            FileToConvertLabel.Location = new Point(192, 121);
             FileToConvertLabel.Name = "FileToConvertLabel";
             FileToConvertLabel.Size = new Size(133, 21);
             FileToConvertLabel.TabIndex = 2;
@@ -102,7 +103,7 @@
             // 
             FileLabel.AutoSize = true;
             FileLabel.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            FileLabel.Location = new Point(391, 76);
+            FileLabel.Location = new Point(331, 121);
             FileLabel.Name = "FileLabel";
             FileLabel.Size = new Size(57, 21);
             FileLabel.TabIndex = 3;
@@ -113,17 +114,17 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.Control;
-            ClientSize = new Size(665, 317);
+            ClientSize = new Size(518, 317);
             Controls.Add(FileLabel);
             Controls.Add(FileToConvertLabel);
             Controls.Add(OpenPngButton);
             Controls.Add(ControlPanel);
-            Controls.Add(CraftButton);
             FormBorderStyle = FormBorderStyle.Fixed3D;
-            HelpButton = true;
             Margin = new Padding(2);
             MaximizeBox = false;
+            MinimizeBox = false;
             Name = "MainFrame";
+            SizeGripStyle = SizeGripStyle.Hide;
             StartPosition = FormStartPosition.CenterScreen;
             Text = "IcoCraft";
             Load += MainFrame_Load;

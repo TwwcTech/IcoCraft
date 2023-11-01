@@ -62,7 +62,7 @@
             }
         }
 
-        // UPDATE
+        // DELETE
         public bool IsCorrectFileSize(string pngPath)
         {
             lock (instanceLock)

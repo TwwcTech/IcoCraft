@@ -20,8 +20,8 @@ namespace IcoCraft
         {
             try
             {
-                string[] files = (string[])e.Data.GetData(DataFormats.FileDrop);
-                foreach (string file in files)
+                string[] files = (string[])e?.Data?.GetData(DataFormats.FileDrop)!;
+                foreach (string file in files!)
                 {
                     if (IconConverterTool.Instance.IsCorrectFileSize(file))
                     {
@@ -44,7 +44,7 @@ namespace IcoCraft
         {
             try
             {
-                if (e.Data.GetDataPresent(DataFormats.FileDrop))
+                if (e.Data!.GetDataPresent(DataFormats.FileDrop))
                 {
                     e.Effect = DragDropEffects.Copy;
                 }

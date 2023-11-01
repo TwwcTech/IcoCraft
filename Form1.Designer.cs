@@ -31,6 +31,11 @@
             ControlPanel = new Panel();
             ViewCraftedButton = new Button();
             CraftButton = new Button();
+            OpenPngDialogue = new OpenFileDialog();
+            SavePngDialogue = new SaveFileDialog();
+            OpenPngButton = new Button();
+            FileToConvertLabel = new Label();
+            FileLabel = new Label();
             ControlPanel.SuspendLayout();
             SuspendLayout();
             // 
@@ -38,7 +43,6 @@
             // 
             ControlPanel.BackColor = SystemColors.Control;
             ControlPanel.Controls.Add(ViewCraftedButton);
-            ControlPanel.Controls.Add(CraftButton);
             ControlPanel.Dock = DockStyle.Bottom;
             ControlPanel.Location = new Point(0, 238);
             ControlPanel.Margin = new Padding(2);
@@ -48,11 +52,11 @@
             // 
             // ViewCraftedButton
             // 
-            ViewCraftedButton.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            ViewCraftedButton.Location = new Point(329, 22);
+            ViewCraftedButton.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            ViewCraftedButton.Location = new Point(221, 20);
             ViewCraftedButton.Margin = new Padding(2);
             ViewCraftedButton.Name = "ViewCraftedButton";
-            ViewCraftedButton.Size = new Size(222, 35);
+            ViewCraftedButton.Size = new Size(240, 35);
             ViewCraftedButton.TabIndex = 1;
             ViewCraftedButton.Text = "VIEW CRAFTED";
             ViewCraftedButton.UseVisualStyleBackColor = true;
@@ -60,15 +64,49 @@
             // 
             // CraftButton
             // 
-            CraftButton.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            CraftButton.Location = new Point(96, 22);
+            CraftButton.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            CraftButton.Location = new Point(252, 136);
             CraftButton.Margin = new Padding(2);
             CraftButton.Name = "CraftButton";
-            CraftButton.Size = new Size(220, 35);
+            CraftButton.Size = new Size(133, 35);
             CraftButton.TabIndex = 0;
             CraftButton.Text = "CRAFT";
             CraftButton.UseVisualStyleBackColor = true;
             CraftButton.Click += CraftButton_Click;
+            // 
+            // OpenPngDialogue
+            // 
+            OpenPngDialogue.FileName = "openFileDialog1";
+            // 
+            // OpenPngButton
+            // 
+            OpenPngButton.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            OpenPngButton.Location = new Point(171, 69);
+            OpenPngButton.Name = "OpenPngButton";
+            OpenPngButton.Size = new Size(75, 35);
+            OpenPngButton.TabIndex = 1;
+            OpenPngButton.Text = "Open";
+            OpenPngButton.UseVisualStyleBackColor = true;
+            // 
+            // FileToConvertLabel
+            // 
+            FileToConvertLabel.AutoSize = true;
+            FileToConvertLabel.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            FileToConvertLabel.Location = new Point(252, 76);
+            FileToConvertLabel.Name = "FileToConvertLabel";
+            FileToConvertLabel.Size = new Size(133, 21);
+            FileToConvertLabel.TabIndex = 2;
+            FileToConvertLabel.Text = "File To Convert :";
+            // 
+            // FileLabel
+            // 
+            FileLabel.AutoSize = true;
+            FileLabel.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            FileLabel.Location = new Point(391, 76);
+            FileLabel.Name = "FileLabel";
+            FileLabel.Size = new Size(57, 21);
+            FileLabel.TabIndex = 3;
+            FileLabel.Text = "label1";
             // 
             // MainFrame
             // 
@@ -76,7 +114,11 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.Control;
             ClientSize = new Size(665, 317);
+            Controls.Add(FileLabel);
+            Controls.Add(FileToConvertLabel);
+            Controls.Add(OpenPngButton);
             Controls.Add(ControlPanel);
+            Controls.Add(CraftButton);
             FormBorderStyle = FormBorderStyle.Fixed3D;
             HelpButton = true;
             Margin = new Padding(2);
@@ -87,6 +129,7 @@
             Load += MainFrame_Load;
             ControlPanel.ResumeLayout(false);
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -94,5 +137,10 @@
         private Panel ControlPanel;
         private Button CraftButton;
         private Button ViewCraftedButton;
+        private OpenFileDialog OpenPngDialogue;
+        private SaveFileDialog SavePngDialogue;
+        private Button OpenPngButton;
+        private Label FileToConvertLabel;
+        private Label FileLabel;
     }
 }

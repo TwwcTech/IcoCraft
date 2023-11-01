@@ -1,11 +1,9 @@
 ﻿namespace IcoCraft.backend.Singletons
 {
-    public sealed class IconConverterTool
+    internal class IconConverterTool
     {
         private readonly static IconConverterTool? _instance;
         private static readonly object instanceLock = new();
-
-        private IconConverterTool() { }
 
         public static IconConverterTool Instance
         {
@@ -22,7 +20,37 @@
             }
         }
 
-        public bool IsPngFile(string pngPath)
+        private Bitmap? _pngFile;
+        private int _maxWidth = 128;
+        private int _minWidth = 64;
+        private string? _saveDestination;
+
+        public Bitmap? PngFile
+        {
+            get => _pngFile;
+            set => _pngFile = value;
+        }
+
+        public int MaxWidth
+        {
+            get => _maxWidth;
+            set => _maxWidth = value;
+        }
+
+        public int MinWidth
+        {
+            get => _minWidth;
+            set => _minWidth = value;
+        }
+
+        public string? SaveDestination
+        {
+            get => _saveDestination;
+            set => _saveDestination = value;
+        }
+
+        // DELETE
+        public bool IsPngfile(string pngPath)
         {
             lock (instanceLock)
             {
@@ -34,6 +62,7 @@
             }
         }
 
+        // UPDATE
         public bool IsCorrectFileSize(string pngPath)
         {
             lock (instanceLock)
@@ -49,7 +78,7 @@
                     throw new Exception(ex.ToString());
                 }
 
-                if (bitmap.Width > 64 || bitmap.Width < 32)
+                if (bitmap.Width > 128 || bitmap.Width < 32)
                 {
                     return false;
                 }
@@ -57,6 +86,7 @@
             }
         }
 
+        //UPDATE
         public void ConvertToIcon(string pngPath, string saveDestination)
         {
             lock (instanceLock)

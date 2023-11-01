@@ -45,7 +45,7 @@
             ControlPanel.Controls.Add(ViewCraftedButton);
             ControlPanel.Controls.Add(CraftButton);
             ControlPanel.Dock = DockStyle.Bottom;
-            ControlPanel.Location = new Point(0, 259);
+            ControlPanel.Location = new Point(0, 200);
             ControlPanel.Margin = new Padding(2);
             ControlPanel.Name = "ControlPanel";
             ControlPanel.Size = new Size(518, 58);
@@ -82,7 +82,7 @@
             // OpenPngButton
             // 
             OpenPngButton.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            OpenPngButton.Location = new Point(111, 114);
+            OpenPngButton.Location = new Point(113, 83);
             OpenPngButton.Name = "OpenPngButton";
             OpenPngButton.Size = new Size(75, 35);
             OpenPngButton.TabIndex = 1;
@@ -93,7 +93,7 @@
             // 
             FileToConvertLabel.AutoSize = true;
             FileToConvertLabel.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            FileToConvertLabel.Location = new Point(192, 121);
+            FileToConvertLabel.Location = new Point(194, 90);
             FileToConvertLabel.Name = "FileToConvertLabel";
             FileToConvertLabel.Size = new Size(133, 21);
             FileToConvertLabel.TabIndex = 2;
@@ -103,7 +103,7 @@
             // 
             FileLabel.AutoSize = true;
             FileLabel.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            FileLabel.Location = new Point(331, 121);
+            FileLabel.Location = new Point(333, 90);
             FileLabel.Name = "FileLabel";
             FileLabel.Size = new Size(57, 21);
             FileLabel.TabIndex = 3;
@@ -114,7 +114,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.Control;
-            ClientSize = new Size(518, 317);
+            ClientSize = new Size(518, 258);
             Controls.Add(FileLabel);
             Controls.Add(FileToConvertLabel);
             Controls.Add(OpenPngButton);

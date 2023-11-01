@@ -2,47 +2,17 @@
 {
     internal class IconConverterTool
     {
-        private string? _pngFile;
-        private Bitmap? _pngBitmap;
-        private int _maxWidth = 128;
-        private int _minWidth = 64;
-        private readonly string? _defaultSaveName = $"CraftedICO_{DateTime.Today.Date:ddMMyyyy}";
-        private string? _saveDestination;
+        public string? PngFile { get; set; }
 
-        public string? PngFile
-        {
-            get => _pngFile;
-            set => _pngFile = value;
-        }
+        public Bitmap? PngBitmap { get; private set; }
 
-        public Bitmap? PngBitmap
-        {
-            get => _pngBitmap;
-            private set => _pngBitmap = value;
-        }
+        public int MaxWidth { get; set; } = 128;
 
-        public int MaxWidth
-        {
-            get => _maxWidth;
-            set => _maxWidth = value;
-        }
+        public int MinWidth { get; set; } = 64;
 
-        public int MinWidth
-        {
-            get => _minWidth;
-            set => _minWidth = value;
-        }
+        public string? DefaultSaveName { get; } = $"CraftedICO_{DateTime.Today.Date:ddMMyyyy}";
 
-        public string? DefaultSaveName
-        {
-            get => _defaultSaveName;
-        }
-
-        public string? SaveDestination
-        {
-            get => _saveDestination;
-            set => _saveDestination = value;
-        }
+        public string? SaveDestination { get; set; }
 
         public FileInfo[]? ICOs { get; set; }
 

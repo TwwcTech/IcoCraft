@@ -2,29 +2,17 @@
 {
     internal class Statics
     {
-        private static DateTime _dateTimeStamp = DateTime.Now;
-        private static string _currentUser = Environment.UserName;
-        private static string? _primaryDestDirPath = $@"C:\Users\{CurrentUser}\OneDrive\Documents\";
-        private static string? _altDestDirPath = $@"C:\{CurrentUser}\Documents\";
+        private static readonly DateTime _dateTimeStamp = DateTime.Now;
+        private static readonly string _currentUser = Environment.UserName;
 
         public static DateTime DateTimeStamp
         {
-            get { return _dateTimeStamp; }
+            get => _dateTimeStamp;
         }
 
         public static string CurrentUser
         {
-            get { return _currentUser; }
-        }
-
-        public static string PrimaryDestDirPath
-        {
-            get { return _primaryDestDirPath!; }
-        }
-
-        public static string AltDestDirPath
-        {
-            get { return _altDestDirPath!; }
+            get => _currentUser;
         }
     }
 }

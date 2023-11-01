@@ -2,7 +2,7 @@
 {
     internal class IconConverterTool
     {
-        public string? PngFile { get; set; }
+        public string? PngFilePath { get; set; }
 
         public Bitmap? PngBitmap { get; private set; }
 
@@ -20,7 +20,7 @@
         {
             try
             {
-                PngBitmap = (Bitmap)Image.FromFile(PngFile!);
+                PngBitmap = (Bitmap)Image.FromFile(PngFilePath!);
                 if (PngBitmap.Width > MaxWidth || PngBitmap.Width < MinWidth)
                 {
                     MessageBox.Show($"The file must not be greater than {MaxWidth} or less than {MinWidth}", "PNG File Size Error", MessageBoxButtons.OK, MessageBoxIcon.Error);

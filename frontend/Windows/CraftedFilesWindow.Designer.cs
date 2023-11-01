@@ -47,7 +47,6 @@
             // 
             // destDirManagerBindingSource
             // 
-            destDirManagerBindingSource.DataSource = typeof(backend.Singletons.DestDirManager);
             // 
             // CraftedIconsDataGrid
             // 

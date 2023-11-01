@@ -14,7 +14,7 @@
 
         public string? SaveDestination { get; set; }
 
-        public FileInfo[]? ICOs { get; set; }
+        public FileInfo[]? ICOs { get; private set; }
 
         public void ConvertToICO()
         {

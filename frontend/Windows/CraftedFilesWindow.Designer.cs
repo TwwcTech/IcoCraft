@@ -38,39 +38,40 @@
             // 
             // CraftedControlPanel
             // 
-            CraftedControlPanel.BackColor = Color.FromArgb(100, 151, 177);
+            CraftedControlPanel.BackColor = SystemColors.Control;
             CraftedControlPanel.Dock = DockStyle.Bottom;
-            CraftedControlPanel.Location = new Point(0, 728);
+            CraftedControlPanel.Location = new Point(0, 437);
+            CraftedControlPanel.Margin = new Padding(2, 2, 2, 2);
             CraftedControlPanel.Name = "CraftedControlPanel";
-            CraftedControlPanel.Size = new Size(1490, 160);
+            CraftedControlPanel.Size = new Size(1043, 96);
             CraftedControlPanel.TabIndex = 0;
-            // 
-            // destDirManagerBindingSource
-            // 
             // 
             // CraftedIconsDataGrid
             // 
             CraftedIconsDataGrid.AllowUserToAddRows = false;
             CraftedIconsDataGrid.AllowUserToDeleteRows = false;
+            CraftedIconsDataGrid.BackgroundColor = SystemColors.Control;
             CraftedIconsDataGrid.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             CraftedIconsDataGrid.Dock = DockStyle.Fill;
             CraftedIconsDataGrid.Location = new Point(0, 0);
+            CraftedIconsDataGrid.Margin = new Padding(2, 2, 2, 2);
             CraftedIconsDataGrid.Name = "CraftedIconsDataGrid";
             CraftedIconsDataGrid.ReadOnly = true;
             CraftedIconsDataGrid.RowHeadersWidth = 62;
             CraftedIconsDataGrid.RowTemplate.Height = 33;
-            CraftedIconsDataGrid.Size = new Size(1490, 728);
+            CraftedIconsDataGrid.Size = new Size(1043, 437);
             CraftedIconsDataGrid.TabIndex = 1;
             // 
             // CraftedFilesWindow
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(179, 205, 224);
-            ClientSize = new Size(1490, 888);
+            ClientSize = new Size(1043, 533);
             Controls.Add(CraftedIconsDataGrid);
             Controls.Add(CraftedControlPanel);
             FormBorderStyle = FormBorderStyle.Fixed3D;
+            Margin = new Padding(2, 2, 2, 2);
             MaximizeBox = false;
             Name = "CraftedFilesWindow";
             StartPosition = FormStartPosition.CenterParent;

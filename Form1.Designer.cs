@@ -36,12 +36,12 @@
             // 
             // ControlPanel
             // 
-            ControlPanel.BackColor = Color.FromArgb(100, 151, 177);
+            ControlPanel.BackColor = SystemColors.Control;
             ControlPanel.Controls.Add(ViewCraftedButton);
             ControlPanel.Controls.Add(CraftButton);
             ControlPanel.Dock = DockStyle.Bottom;
             ControlPanel.Location = new Point(0, 238);
-            ControlPanel.Margin = new Padding(2, 2, 2, 2);
+            ControlPanel.Margin = new Padding(2);
             ControlPanel.Name = "ControlPanel";
             ControlPanel.Size = new Size(665, 79);
             ControlPanel.TabIndex = 0;
@@ -50,7 +50,7 @@
             // 
             ViewCraftedButton.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point);
             ViewCraftedButton.Location = new Point(329, 22);
-            ViewCraftedButton.Margin = new Padding(2, 2, 2, 2);
+            ViewCraftedButton.Margin = new Padding(2);
             ViewCraftedButton.Name = "ViewCraftedButton";
             ViewCraftedButton.Size = new Size(222, 35);
             ViewCraftedButton.TabIndex = 1;
@@ -62,7 +62,7 @@
             // 
             CraftButton.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point);
             CraftButton.Location = new Point(96, 22);
-            CraftButton.Margin = new Padding(2, 2, 2, 2);
+            CraftButton.Margin = new Padding(2);
             CraftButton.Name = "CraftButton";
             CraftButton.Size = new Size(220, 35);
             CraftButton.TabIndex = 0;
@@ -74,12 +74,12 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.FromArgb(179, 205, 224);
+            BackColor = SystemColors.Control;
             ClientSize = new Size(665, 317);
             Controls.Add(ControlPanel);
             FormBorderStyle = FormBorderStyle.Fixed3D;
             HelpButton = true;
-            Margin = new Padding(2, 2, 2, 2);
+            Margin = new Padding(2);
             MaximizeBox = false;
             Name = "MainFrame";
             StartPosition = FormStartPosition.CenterScreen;

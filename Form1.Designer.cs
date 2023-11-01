@@ -32,7 +32,7 @@
             ViewCraftedButton = new Button();
             CraftButton = new Button();
             OpenPngDialogue = new OpenFileDialog();
-            SavePngDialogue = new SaveFileDialog();
+            SaveIcoDialogue = new SaveFileDialog();
             OpenPngButton = new Button();
             FileToConvertLabel = new Label();
             FileLabel = new Label();
@@ -88,6 +88,7 @@
             OpenPngButton.TabIndex = 1;
             OpenPngButton.Text = "Open";
             OpenPngButton.UseVisualStyleBackColor = true;
+            OpenPngButton.Click += OpenPngButton_Click;
             // 
             // FileToConvertLabel
             // 
@@ -139,7 +140,7 @@
         private Button CraftButton;
         private Button ViewCraftedButton;
         private OpenFileDialog OpenPngDialogue;
-        private SaveFileDialog SavePngDialogue;
+        private SaveFileDialog SaveIcoDialogue;
         private Button OpenPngButton;
         private Label FileToConvertLabel;
         private Label FileLabel;

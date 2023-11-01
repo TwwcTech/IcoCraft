@@ -14,9 +14,26 @@ namespace IcoCraft
 
         }
 
+        private void OpenPngButton_Click(object sender, EventArgs e)
+        {
+            OpenPngDialogue.Title = "Select PNG File";
+            OpenPngDialogue.Filter = ".png|*.png";
+            OpenPngDialogue.InitialDirectory = @"C:\";
+            if (OpenPngDialogue.ShowDialog() == DialogResult.OK)
+            {
+
+            }
+        }
+
         private void CraftButton_Click(object sender, EventArgs e)
         {
+            SaveIcoDialogue.Title = "Save Icon Dialoge";
+            SaveIcoDialogue.Filter = ".ico|*.ico";
+            SaveIcoDialogue.InitialDirectory = @"C:\";
+            if (SaveIcoDialogue.ShowDialog() == DialogResult.OK)
+            {
 
+            }
         }
 
         private void ViewCraftedButton_Click(object sender, EventArgs e)

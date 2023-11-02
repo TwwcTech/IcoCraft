@@ -12,7 +12,7 @@
 
         public string? SaveDestination { get; set; }
 
-        public FileInfo[]? ICOs { get; private set; }
+        public List<FileInfo>? ICOs { get; private set; }
 
         public void ConvertToICO()
         {
@@ -36,7 +36,10 @@
         public void GetICOs()
         {
             DirectoryInfo directoryInfo = new(SaveDestination!);
-            ICOs = directoryInfo.GetFiles("*.ico");
+            foreach (FileInfo file in directoryInfo.GetFiles("*.ico"))
+            {
+                ICOs!.Add(file);
+            }
         }
     }
 }

@@ -11,7 +11,8 @@ namespace IcoCraft
 
         private void MainFrame_Load(object sender, EventArgs e)
         {
-
+            FileNameOutputLabel.Text = "";
+            FileFullPathOutputLabel.Text = "";
         }
 
         private void OpenPngButton_Click(object sender, EventArgs e)
@@ -21,7 +22,8 @@ namespace IcoCraft
             OpenPngDialogue.InitialDirectory = @"C:\";
             if (OpenPngDialogue.ShowDialog() == DialogResult.OK)
             {
-
+                FileNameOutputLabel.Text = Path.GetFileName(OpenPngDialogue.FileName);
+                FileFullPathOutputLabel.Text = OpenPngDialogue.FileName;
             }
         }
 

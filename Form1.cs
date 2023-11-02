@@ -11,7 +11,12 @@ namespace IcoCraft
 
         private void MainFrame_Load(object sender, EventArgs e)
         {
-
+            MaxFileSizeComboBox.Enabled = false;
+            foreach (int fileSize in IconConverterTool.OptionalFileSizes)
+            {
+                MaxFileSizeComboBox.Items.Add(fileSize);
+            }
+            MaxFileSizeComboBox.Text = 128.ToString();
         }
 
         private void OpenPngButton_Click(object sender, EventArgs e)
@@ -21,6 +26,7 @@ namespace IcoCraft
             OpenPngDialogue.Title = "Select PNG File";
             OpenPngDialogue.Filter = ".png|*.png";
             OpenPngDialogue.InitialDirectory = @"C:\";
+            OpenPngDialogue.FileName = IconConverterTool.DefaultSaveName;
             if (OpenPngDialogue.ShowDialog() == DialogResult.OK)
             {
                 SaveIcoDialogue.Title = "Save Icon Dialoge";
@@ -28,19 +34,23 @@ namespace IcoCraft
                 SaveIcoDialogue.InitialDirectory = @"C:\";
                 if (SaveIcoDialogue.ShowDialog() == DialogResult.OK)
                 {
-
                     IconConverterTool iconConverterTool = new()
                     {
                         PngFilePath = OpenPngDialogue.FileName,
-                        MaxWidth = 256,
-                        MinWidth = 64,
-                        SaveDestination = SaveIcoDialogue.FileName
+                        MaxWidth = MaxFileSizeCheckbox.Checked ? int.Parse(MaxFileSizeComboBox.Text.Trim()) : 128,
+                        SaveDestination = SaveIcoDialogue.FileName.Trim()
                     };
                     ConvertProgressBar.Value = 50;
                     iconConverterTool.ConvertToICO();
                     ConvertProgressBar.Value = 100;
                 }
             }
+        }
+
+        private void MaxSizeCheckbox_CheckedChanged(object sender, EventArgs e)
+        {
+            MaxFileSizeComboBox.Enabled = MaxFileSizeCheckbox.Checked;
+            MaxFileSizeComboBox.Text = MaxFileSizeCheckbox.Checked ? string.Empty : 128.ToString();
         }
     }
 }

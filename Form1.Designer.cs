@@ -32,6 +32,10 @@
             SaveIcoDialogue = new SaveFileDialog();
             OpenPngButton = new Button();
             ConvertProgressBar = new ProgressBar();
+            MaxFileSizeCheckbox = new CheckBox();
+            OptionsGBox = new GroupBox();
+            MaxFileSizeComboBox = new ComboBox();
+            OptionsGBox.SuspendLayout();
             SuspendLayout();
             // 
             // OpenPngDialogue
@@ -41,7 +45,7 @@
             // OpenPngButton
             // 
             OpenPngButton.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            OpenPngButton.Location = new Point(151, 159);
+            OpenPngButton.Location = new Point(143, 55);
             OpenPngButton.Name = "OpenPngButton";
             OpenPngButton.Size = new Size(196, 35);
             OpenPngButton.TabIndex = 1;
@@ -51,10 +55,44 @@
             // 
             // ConvertProgressBar
             // 
-            ConvertProgressBar.Location = new Point(12, 265);
+            ConvertProgressBar.Location = new Point(12, 303);
             ConvertProgressBar.Name = "ConvertProgressBar";
             ConvertProgressBar.Size = new Size(481, 23);
+            ConvertProgressBar.Style = ProgressBarStyle.Continuous;
             ConvertProgressBar.TabIndex = 2;
+            // 
+            // MaxFileSizeCheckbox
+            // 
+            MaxFileSizeCheckbox.AutoSize = true;
+            MaxFileSizeCheckbox.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            MaxFileSizeCheckbox.Location = new Point(72, 58);
+            MaxFileSizeCheckbox.Name = "MaxFileSizeCheckbox";
+            MaxFileSizeCheckbox.Size = new Size(123, 25);
+            MaxFileSizeCheckbox.TabIndex = 3;
+            MaxFileSizeCheckbox.Text = "Max File Size";
+            MaxFileSizeCheckbox.UseVisualStyleBackColor = true;
+            MaxFileSizeCheckbox.CheckedChanged += MaxSizeCheckbox_CheckedChanged;
+            // 
+            // OptionsGBox
+            // 
+            OptionsGBox.Controls.Add(MaxFileSizeComboBox);
+            OptionsGBox.Controls.Add(MaxFileSizeCheckbox);
+            OptionsGBox.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            OptionsGBox.Location = new Point(12, 125);
+            OptionsGBox.Name = "OptionsGBox";
+            OptionsGBox.Size = new Size(481, 129);
+            OptionsGBox.TabIndex = 4;
+            OptionsGBox.TabStop = false;
+            OptionsGBox.Text = "OPTIONS";
+            // 
+            // MaxFileSizeComboBox
+            // 
+            MaxFileSizeComboBox.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            MaxFileSizeComboBox.FormattingEnabled = true;
+            MaxFileSizeComboBox.Location = new Point(229, 56);
+            MaxFileSizeComboBox.Name = "MaxFileSizeComboBox";
+            MaxFileSizeComboBox.Size = new Size(176, 29);
+            MaxFileSizeComboBox.TabIndex = 5;
             // 
             // MainFrame
             // 
@@ -62,6 +100,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.Control;
             ClientSize = new Size(505, 338);
+            Controls.Add(OptionsGBox);
             Controls.Add(ConvertProgressBar);
             Controls.Add(OpenPngButton);
             FormBorderStyle = FormBorderStyle.Fixed3D;
@@ -73,6 +112,8 @@
             StartPosition = FormStartPosition.CenterScreen;
             Text = "IcoCraft";
             Load += MainFrame_Load;
+            OptionsGBox.ResumeLayout(false);
+            OptionsGBox.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -81,5 +122,8 @@
         private SaveFileDialog SaveIcoDialogue;
         private Button OpenPngButton;
         private ProgressBar ConvertProgressBar;
+        private CheckBox MaxFileSizeCheckbox;
+        private GroupBox OptionsGBox;
+        private ComboBox MaxFileSizeComboBox;
     }
 }

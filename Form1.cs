@@ -1,4 +1,5 @@
 using IcoCraft.frontend.Windows;
+using IcoCraft.backend;
 
 namespace IcoCraft
 {
@@ -11,8 +12,7 @@ namespace IcoCraft
 
         private void MainFrame_Load(object sender, EventArgs e)
         {
-            FileNameOutputLabel.Text = "";
-            FileFullPathOutputLabel.Text = "";
+
         }
 
         private void OpenPngButton_Click(object sender, EventArgs e)
@@ -22,19 +22,20 @@ namespace IcoCraft
             OpenPngDialogue.InitialDirectory = @"C:\";
             if (OpenPngDialogue.ShowDialog() == DialogResult.OK)
             {
-                FileNameOutputLabel.Text = Path.GetFileName(OpenPngDialogue.FileName);
-                FileFullPathOutputLabel.Text = OpenPngDialogue.FileName;
-            }
-        }
-
-        private void CraftButton_Click(object sender, EventArgs e)
-        {
-            SaveIcoDialogue.Title = "Save Icon Dialoge";
-            SaveIcoDialogue.Filter = ".ico|*.ico";
-            SaveIcoDialogue.InitialDirectory = @"C:\";
-            if (SaveIcoDialogue.ShowDialog() == DialogResult.OK)
-            {
-
+                SaveIcoDialogue.Title = "Save Icon Dialoge";
+                SaveIcoDialogue.Filter = ".ico|*.ico";
+                SaveIcoDialogue.InitialDirectory = @"C:\";
+                if (SaveIcoDialogue.ShowDialog() == DialogResult.OK)
+                {
+                    IconConverterTool iconConverterTool = new()
+                    {
+                        PngFilePath = OpenPngDialogue.FileName,
+                        MaxWidth = 256,
+                        MinWidth = 64,
+                        SaveDestination = SaveIcoDialogue.FileName
+                    };
+                    iconConverterTool.ConvertToICO();
+                }
             }
         }
 

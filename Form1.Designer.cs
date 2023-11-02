@@ -31,6 +31,7 @@
             OpenPngDialogue = new OpenFileDialog();
             SaveIcoDialogue = new SaveFileDialog();
             OpenPngButton = new Button();
+            ConvertProgressBar = new ProgressBar();
             SuspendLayout();
             // 
             // OpenPngDialogue
@@ -48,12 +49,20 @@
             OpenPngButton.UseVisualStyleBackColor = true;
             OpenPngButton.Click += OpenPngButton_Click;
             // 
+            // ConvertProgressBar
+            // 
+            ConvertProgressBar.Location = new Point(12, 265);
+            ConvertProgressBar.Name = "ConvertProgressBar";
+            ConvertProgressBar.Size = new Size(481, 23);
+            ConvertProgressBar.TabIndex = 2;
+            // 
             // MainFrame
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.Control;
             ClientSize = new Size(505, 338);
+            Controls.Add(ConvertProgressBar);
             Controls.Add(OpenPngButton);
             FormBorderStyle = FormBorderStyle.Fixed3D;
             Margin = new Padding(2);
@@ -71,5 +80,6 @@
         private OpenFileDialog OpenPngDialogue;
         private SaveFileDialog SaveIcoDialogue;
         private Button OpenPngButton;
+        private ProgressBar ConvertProgressBar;
     }
 }

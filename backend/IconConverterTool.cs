@@ -12,8 +12,6 @@
 
         public string? SaveDestination { get; set; }
 
-        public List<FileInfo>? ICOs { get; private set; }
-
         public void ConvertToICO()
         {
             try
@@ -30,15 +28,6 @@
             catch (Exception ex)
             {
                 throw new Exception(ex.ToString());
-            }
-        }
-
-        public void GetICOs()
-        {
-            DirectoryInfo directoryInfo = new(SaveDestination!);
-            foreach (FileInfo file in directoryInfo.GetFiles("*.ico"))
-            {
-                ICOs!.Add(file);
             }
         }
     }

@@ -28,36 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            ControlPanel = new Panel();
-            ViewCraftedButton = new Button();
             OpenPngDialogue = new OpenFileDialog();
             SaveIcoDialogue = new SaveFileDialog();
             OpenPngButton = new Button();
-            ControlPanel.SuspendLayout();
             SuspendLayout();
-            // 
-            // ControlPanel
-            // 
-            ControlPanel.BackColor = SystemColors.Control;
-            ControlPanel.Controls.Add(ViewCraftedButton);
-            ControlPanel.Dock = DockStyle.Bottom;
-            ControlPanel.Location = new Point(0, 324);
-            ControlPanel.Margin = new Padding(2);
-            ControlPanel.Name = "ControlPanel";
-            ControlPanel.Size = new Size(505, 58);
-            ControlPanel.TabIndex = 0;
-            // 
-            // ViewCraftedButton
-            // 
-            ViewCraftedButton.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            ViewCraftedButton.Location = new Point(151, 12);
-            ViewCraftedButton.Margin = new Padding(2);
-            ViewCraftedButton.Name = "ViewCraftedButton";
-            ViewCraftedButton.Size = new Size(196, 35);
-            ViewCraftedButton.TabIndex = 1;
-            ViewCraftedButton.Text = "VIEW CRAFTED";
-            ViewCraftedButton.UseVisualStyleBackColor = true;
-            ViewCraftedButton.Click += ViewCraftedButton_Click;
             // 
             // OpenPngDialogue
             // 
@@ -79,9 +53,8 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.Control;
-            ClientSize = new Size(505, 382);
+            ClientSize = new Size(505, 338);
             Controls.Add(OpenPngButton);
-            Controls.Add(ControlPanel);
             FormBorderStyle = FormBorderStyle.Fixed3D;
             Margin = new Padding(2);
             MaximizeBox = false;
@@ -91,14 +64,10 @@
             StartPosition = FormStartPosition.CenterScreen;
             Text = "IcoCraft";
             Load += MainFrame_Load;
-            ControlPanel.ResumeLayout(false);
             ResumeLayout(false);
         }
 
         #endregion
-
-        private Panel ControlPanel;
-        private Button ViewCraftedButton;
         private OpenFileDialog OpenPngDialogue;
         private SaveFileDialog SaveIcoDialogue;
         private Button OpenPngButton;

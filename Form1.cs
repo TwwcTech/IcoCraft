@@ -1,4 +1,3 @@
-using IcoCraft.frontend.Windows;
 using IcoCraft.backend;
 
 namespace IcoCraft
@@ -36,17 +35,6 @@ namespace IcoCraft
                     };
                     iconConverterTool.ConvertToICO();
                 }
-            }
-        }
-
-        private void ViewCraftedButton_Click(object sender, EventArgs e)
-        {
-            Hide();
-            Form viewCraftedForm = new CraftedFilesWindow();
-            viewCraftedForm.ShowDialog();
-            if (!viewCraftedForm.Visible)
-            {
-                Show();
             }
         }
     }

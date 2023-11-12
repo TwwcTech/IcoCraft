@@ -2,11 +2,22 @@
 
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
-    <TargetFramework>net7.0-windows</TargetFramework>
+    <TargetFramework>net7.0-windows10.0.22621.0</TargetFramework>
     <Nullable>enable</Nullable>
     <UseWindowsForms>true</UseWindowsForms>
     <ImplicitUsings>enable</ImplicitUsings>
+    <StartupObject>IcoCraft.Program</StartupObject>
+    <ApplicationIcon>ico_craft.ico</ApplicationIcon>
+    <Title>IcoCraft</Title>
+    <Company>$(Authors)twwc.tech</Company>
+    <Authors>$(AssemblyName)</Authors>
+    <Description>Convert your PNG files into an Icon (ico) file</Description>
+    <PackageIcon></PackageIcon>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="ico_craft.ico" />
+  </ItemGroup>
 
   <ItemGroup>
     <Folder Include="frontend\" />

@@ -2,6 +2,6 @@
 - Convert your PNG files to ICON (ico) files
 - PNG optional sizes - 128, 256, 512
 
-![icoCraft-Standard](https://github.com/TwwcTech/IcoCraft/assets/71518263/f5332b92-4812-438d-a4ab-6491b8dfe38e)
 
-![icoCraft-Options](https://github.com/TwwcTech/IcoCraft/assets/71518263/76ba2b4f-27de-4804-b5ed-1b30b044aebd)
+![icoCraft-Standard](https://github.com/TwwcTech/IcoCraft/assets/71518263/8c262b8f-b2b0-4c44-b8df-854feaee29a3)
+![icoCraft-Options](https://github.com/TwwcTech/IcoCraft/assets/71518263/0598078b-37f7-4a3d-b4d2-03214597fc7c)

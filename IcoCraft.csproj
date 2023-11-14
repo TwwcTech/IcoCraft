@@ -7,7 +7,7 @@
     <UseWindowsForms>true</UseWindowsForms>
     <ImplicitUsings>enable</ImplicitUsings>
     <StartupObject>IcoCraft.Program</StartupObject>
-    <ApplicationIcon>ico_craft.ico</ApplicationIcon>
+    <ApplicationIcon>lololol.ico</ApplicationIcon>
     <Title>IcoCraft</Title>
     <Company>$(Authors)twwc.tech</Company>
     <Authors>$(AssemblyName)</Authors>
@@ -16,7 +16,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Content Include="ico_craft.ico" />
+    <Content Include="lololol.ico" />
   </ItemGroup>
 
   <ItemGroup>

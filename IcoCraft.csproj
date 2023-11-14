@@ -7,21 +7,28 @@
     <UseWindowsForms>true</UseWindowsForms>
     <ImplicitUsings>enable</ImplicitUsings>
     <StartupObject>IcoCraft.Program</StartupObject>
-    <ApplicationIcon>lololol.ico</ApplicationIcon>
+    <ApplicationIcon>icoCraftNew.ico</ApplicationIcon>
     <Title>IcoCraft</Title>
     <Company>$(Authors)twwc.tech</Company>
     <Authors>$(AssemblyName)</Authors>
     <Description>Convert your PNG files into an Icon (ico) file</Description>
-    <PackageIcon></PackageIcon>
+    <PackageIcon>newbiggericon.png</PackageIcon>
   </PropertyGroup>
 
   <ItemGroup>
-    <Content Include="lololol.ico" />
+    <Content Include="icoCraftNew.ico" />
   </ItemGroup>
 
   <ItemGroup>
     <Folder Include="frontend\" />
     <Folder Include="resources\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\..\..\..\..\..\Downloads\newbiggericon.png">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
   </ItemGroup>
 
 </Project>

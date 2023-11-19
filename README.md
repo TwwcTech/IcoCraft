@@ -3,7 +3,9 @@ Easily convert PNG files into icon files with this user-friendly C# application.
 
 # Application Preview
 **Main Window**:
+
 <img width="359" alt="MainWindow" src="https://github.com/TwwcTech/IcoCraft/assets/71518263/f27f265d-4060-4965-a6b7-30bc3b3714f1">
 
 **Options**
+
 <img width="355" alt="OptionsWindow" src="https://github.com/TwwcTech/IcoCraft/assets/71518263/2167e70b-f70a-4d11-a6ab-c01d5ba8c3f5">

@@ -21,6 +21,7 @@ namespace IcoCraft
 
         private void OpenPngButton_Click(object sender, EventArgs e)
         {
+            ConvertProgressBar.Maximum = 100;
             ConvertProgressBar.Value = 0;
 
             OpenPngDialogue.Title = "Select PNG File";
@@ -29,18 +30,20 @@ namespace IcoCraft
             OpenPngDialogue.FileName = IconConverterTool.DefaultSaveName;
             if (OpenPngDialogue.ShowDialog() == DialogResult.OK)
             {
+                ConvertProgressBar.Value = 25;
                 SaveIcoDialogue.Title = "Save Icon Dialoge";
                 SaveIcoDialogue.Filter = ".ico|*.ico";
                 SaveIcoDialogue.InitialDirectory = @"C:\";
                 if (SaveIcoDialogue.ShowDialog() == DialogResult.OK)
                 {
+                    ConvertProgressBar.Value = 50;
                     IconConverterTool iconConverterTool = new()
                     {
                         PngFilePath = OpenPngDialogue.FileName,
                         MaxWidth = MaxFileSizeCheckbox.Checked ? int.Parse(MaxFileSizeComboBox.Text.Trim()) : 128,
                         SaveDestination = SaveIcoDialogue.FileName.Trim()
                     };
-                    ConvertProgressBar.Value = 50;
+                    ConvertProgressBar.Value = 75;
                     iconConverterTool.ConvertToICO();
                     ConvertProgressBar.Value = 100;
                 }

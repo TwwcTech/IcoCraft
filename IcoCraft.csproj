@@ -7,17 +7,17 @@
     <UseWindowsForms>true</UseWindowsForms>
     <ImplicitUsings>enable</ImplicitUsings>
     <StartupObject></StartupObject>
-    <ApplicationIcon>icoCraftNew.ico</ApplicationIcon>
+    <ApplicationIcon>icoCraftOfficial.ico</ApplicationIcon>
     <Title>IcoCraft</Title>
     <Company>$(Authors)twwc.tech</Company>
     <Authors>$(AssemblyName)</Authors>
     <Description>Convert your PNG files into an Icon (ico) file</Description>
-    <PackageIcon>icoCraftNew.ico</PackageIcon>
+    <PackageIcon>icoCraftOfficial.ico</PackageIcon>
     <Version>$(VersionPrefix)1.1.0</Version>
   </PropertyGroup>
 
   <ItemGroup>
-    <Content Include="icoCraftNew.ico" />
+    <Content Include="icoCraftOfficial.ico" />
   </ItemGroup>
 
   <ItemGroup>
@@ -26,7 +26,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="..\..\..\..\icoCraftNew.ico">
+    <None Include="..\..\..\..\icoCraftOfficial.ico">
       <Pack>True</Pack>
       <PackagePath>\</PackagePath>
     </None>

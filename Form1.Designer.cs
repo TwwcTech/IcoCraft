@@ -68,9 +68,9 @@
             MaxFileSizeCheckbox.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point);
             MaxFileSizeCheckbox.Location = new Point(72, 58);
             MaxFileSizeCheckbox.Name = "MaxFileSizeCheckbox";
-            MaxFileSizeCheckbox.Size = new Size(123, 25);
+            MaxFileSizeCheckbox.Size = new Size(85, 25);
             MaxFileSizeCheckbox.TabIndex = 3;
-            MaxFileSizeCheckbox.Text = "Max File Size";
+            MaxFileSizeCheckbox.Text = "File Size";
             MaxFileSizeCheckbox.UseVisualStyleBackColor = true;
             MaxFileSizeCheckbox.CheckedChanged += MaxSizeCheckbox_CheckedChanged;
             // 
@@ -90,9 +90,9 @@
             // 
             MaxFileSizeComboBox.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point);
             MaxFileSizeComboBox.FormattingEnabled = true;
-            MaxFileSizeComboBox.Location = new Point(229, 56);
+            MaxFileSizeComboBox.Location = new Point(193, 56);
             MaxFileSizeComboBox.Name = "MaxFileSizeComboBox";
-            MaxFileSizeComboBox.Size = new Size(176, 29);
+            MaxFileSizeComboBox.Size = new Size(212, 29);
             MaxFileSizeComboBox.TabIndex = 5;
             // 
             // MainFrame
@@ -110,6 +110,8 @@
             MaximizeBox = false;
             MinimizeBox = false;
             Name = "MainFrame";
+            ShowIcon = false;
+            ShowInTaskbar = false;
             SizeGripStyle = SizeGripStyle.Hide;
             StartPosition = FormStartPosition.CenterScreen;
             Text = "IcoCraft";
